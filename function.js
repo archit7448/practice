@@ -36,6 +36,9 @@ console.log(findMin(3,5,9,1))
 
 
 
+
+
+
 /**
  * Given three angles of a triange, your function should return if it is a scalene, isosceles, equilateral triangle or not a triangle at all. Example:
 Input: typeOfTriangle(30, 60, 90) ––> Output: Scalene Triangle
@@ -127,7 +130,7 @@ Explanation: 2 represents shifting alphabets by 2 places. a –> c, b –> d, c 
 let alphaArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 const encodeString = (string,step) =>  string.split("").map(x=> {
-    let indexOf = alphaArray.indexOf(x)+(step % 26)
+    let indexOf = alphaArray.indexOf(x)+(step) % 26
     return indexOf>25? (indexOf-26) :indexOf
 }).map(x => alphaArray[x]).join("")
 
@@ -163,6 +166,7 @@ Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era s
 const reverseCharactersOfWord = string => string.split(" ").map(x => x.split("").reverse().join("")).join(" ")
 
 console.log(reverseCharactersOfWord("we are neoGrammers"))
+
 
 
 
